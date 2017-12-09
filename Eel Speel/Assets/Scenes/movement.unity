@@ -1558,26 +1558,6 @@ Prefab:
       propertyPath: m_Name
       value: bubblespitter (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 4312893816748076, guid: 3d50eeb2951153043b8d1c665d2dafaa, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312893816748076, guid: 3d50eeb2951153043b8d1c665d2dafaa, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312893816748076, guid: 3d50eeb2951153043b8d1c665d2dafaa, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312893816748076, guid: 3d50eeb2951153043b8d1c665d2dafaa, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312893816748076, guid: 3d50eeb2951153043b8d1c665d2dafaa, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d50eeb2951153043b8d1c665d2dafaa, type: 2}
   m_IsPrefabParent: 0
