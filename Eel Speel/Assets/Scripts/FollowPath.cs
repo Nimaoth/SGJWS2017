@@ -1,6 +1,7 @@
 ﻿using BansheeGz.BGSpline.Components;
 using BansheeGz.BGSpline.Curve;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FollowPath : MonoBehaviour {
     public float Acceleration = 0.0f;
@@ -9,6 +10,8 @@ public class FollowPath : MonoBehaviour {
     public float multiplierMax = 2.0f;
     public float multiplierMin = 0.5f;
     public float multiplierDamp = 1.0f;
+
+    public Text timeText;
 
     public BGCurve curve;
 	public BGCcMath math;
@@ -45,6 +48,7 @@ public class FollowPath : MonoBehaviour {
     private void Update()
     {
         Timer = Time.time;
+        timeText.text = Timer.ToString("0.00");
     }
 
     // Update is called once per frame
