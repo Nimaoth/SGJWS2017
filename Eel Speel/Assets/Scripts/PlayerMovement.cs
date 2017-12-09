@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public bool blue = true;
+    public int blueYellowNone = 0;
     [SerializeField]
     private float maxLength;
 
@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 	private List<Transform> bodyParts;
 	public float minDistanc = 1;
 	public float bodyRotSpeed = 50;
+
 
 	public Transform sensor;
 
@@ -41,8 +42,15 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
-        
+        if (controller.GetL2()) //blau zieht sich zu yellow an
+        {
+            blueYellowNone -= 1;
+        }
 
+        if (controller.GetR2())
+        {
+            blueYellowNone += 1;
+        }
 
 		var l = controller.GetLeftStick();
 		var force = new Vector4(l.x, l.y, 0, 0) * movementForce;
