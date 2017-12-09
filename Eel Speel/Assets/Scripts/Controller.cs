@@ -96,4 +96,9 @@ public class Controller {
 	{
 		return Input.GetButtonDown("X_" + id);
 	}
+
+	public static bool GetPadDown()
+	{
+		return Input.GetButtonDown("Pad");
+	}
 }

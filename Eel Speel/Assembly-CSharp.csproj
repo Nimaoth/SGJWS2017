@@ -103,6 +103,7 @@
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\FollowPath.cs" />
      <Compile Include="Assets\Scripts\MagneticObject.cs" />
+     <Compile Include="Assets\Scripts\PlayerJoin.cs" />
      <Compile Include="Assets\Scripts\PlayerModel.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\snake_mov.cs" />
