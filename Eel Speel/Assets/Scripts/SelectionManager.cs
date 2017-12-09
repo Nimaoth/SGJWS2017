@@ -12,7 +12,7 @@ public class SelectionManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Controller.GetPadDown())
 		{
 			PlayerIds = players.Where(p => p.joined).Select(p => p.id).ToArray();
 			if (PlayerIds.Length >= 1)
