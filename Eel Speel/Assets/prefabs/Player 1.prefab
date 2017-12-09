@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 222783693546565624}
   - component: {fileID: 114663113082448256}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 222616250711783970}
   - component: {fileID: 114343678739066508}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Place
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
