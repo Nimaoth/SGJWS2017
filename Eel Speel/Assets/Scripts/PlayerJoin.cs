@@ -18,7 +18,6 @@ public class PlayerJoin : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-		Debug.Log(controller.GetXDown());
 		if (controller.GetXDown())
 		{
 			joined = !joined;
