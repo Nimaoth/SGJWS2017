@@ -1,6 +1,7 @@
 ﻿using BansheeGz.BGSpline.Components;
 using BansheeGz.BGSpline.Curve;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FollowPath : MonoBehaviour {
     public float Acceleration = 0.0f;
@@ -10,8 +11,13 @@ public class FollowPath : MonoBehaviour {
     public float multiplierMin = 0.5f;
     public float multiplierDamp = 1.0f;
 
+    public Text timeText;
+
     public BGCurve curve;
 	public BGCcMath math;
+	
+	public AudioClip suck;
+	public AudioClip antiSuck;
 
 	private float pathLength = 0;
 
@@ -21,8 +27,11 @@ public class FollowPath : MonoBehaviour {
 	[SerializeField]
 	private float speed = 1;
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private float Timer = 0.0f;
+
+    // Use this for initialization
+    void Start () {
 		for (int i = 0; i < curve.PointsCount - 1; i++)
 		{
 			var p1 = curve.Points[i];
@@ -34,9 +43,16 @@ public class FollowPath : MonoBehaviour {
 			pathLength += l;
 		}
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    //Timer
+    private void Update()
+    {
+        Timer = Time.time;
+        timeText.text = Timer.ToString("0.00");
+    }
+
+    // Update is called once per frame
+    void FixedUpdate ()
 	{
         multiplier *= 1 + (Acceleration * 0.02f);
 
@@ -54,5 +70,17 @@ public class FollowPath : MonoBehaviour {
 		var pos = math.CalcPositionByDistanceRatio(position / pathLength);
 		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
+	}
+
+	public void Suck(float amount)
+	{
+		if (amount > 0)
+		{
+			AudioSource.PlayClipAtPoint(suck, Vector3.zero);
+		}
+		else
+		{
+			AudioSource.PlayClipAtPoint(antiSuck, Vector3.zero);
+		}
 	}
 }

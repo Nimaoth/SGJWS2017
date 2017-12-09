@@ -1239,6 +1239,8 @@ MonoBehaviour:
   multiplierDamp: 0.5
   curve: {fileID: 114050755801716234, guid: 5a4331881a3711b48908124aa26457e8, type: 2}
   math: {fileID: 114826541419650716, guid: 5a4331881a3711b48908124aa26457e8, type: 2}
+  suck: {fileID: 8300000, guid: 1da5d7c6d9fc6b34ea04d4a44b7682db, type: 3}
+  antiSuck: {fileID: 8300000, guid: 4cc78984e7f1df848b2e6851ede0d372, type: 3}
   position: 0
   speed: 20
 --- !u!124 &124102903512892670

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 136792024302835560}
   - component: {fileID: 23093282582021624}
   - component: {fileID: 114124158960413080}
+  - component: {fileID: 136621596643749794}
   m_Layer: 0
   m_Name: SnakeV
   m_TagString: Untagged
@@ -98,6 +99,19 @@ MonoBehaviour:
   scrollSpeedX: 0.5
   scrollSpeedY: 1
   rend: {fileID: 0}
+--- !u!136 &136621596643749794
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026058520972822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.55
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136792024302835560
 CapsuleCollider:
   m_ObjectHideFlags: 1
