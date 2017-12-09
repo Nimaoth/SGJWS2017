@@ -266,9 +266,11 @@
     <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveSettings.cs" />
     <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGReflectionAdapter.cs" />
     <Compile Include="Assets\Scripts\AaalMovement.cs" />
+    <Compile Include="Assets\Scripts\BodyMovement.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\FollowPath.cs" />
+    <Compile Include="Assets\Scripts\MagneticObject.cs" />
     <Compile Include="Assets\Scripts\OnTouch.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\snake_mov.cs" />

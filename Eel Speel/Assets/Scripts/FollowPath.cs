@@ -3,8 +3,10 @@ using BansheeGz.BGSpline.Curve;
 using UnityEngine;
 
 public class FollowPath : MonoBehaviour {
+    public bool isAccelerating;
+    private float multiplier = 1;
 
-	public BGCurve curve;
+    public BGCurve curve;
 	public BGCcMath math;
 
 	private float pathLength = 0;
@@ -34,10 +36,19 @@ public class FollowPath : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if (position >= pathLength)
+        if (isAccelerating)
+        {
+            multiplier *= 1.05f;
+        }
+        else if (multiplier > 1)
+        {
+            multiplier *= 0.95f;
+        }
+
+        if (position >= pathLength)
 			position = 0;
 
-		position += speed * Time.fixedDeltaTime;
+		position += speed * multiplier * Time.fixedDeltaTime;
 
 		var pos = math.CalcByDistance(BGCurveBaseMath.Field.Position, position);
 		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistance(position));
