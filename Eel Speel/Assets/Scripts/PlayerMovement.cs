@@ -44,8 +44,9 @@ public class PlayerMovement : MonoBehaviour
 			playerRigid.AddForce(uiae.x, uiae.y, uiae.z);
 
 		var rightstick = controller.GetRightStick();
-		sensor.Rotate(new Vector3(rightstick.y * Time.deltaTime * -rotateSpeed, rightstick.x * Time.fixedDeltaTime * rotateSpeed, 0));
+		//sensor.Rotate(new Vector3(rightstick.y * Time.deltaTime * -rotateSpeed, rightstick.x * Time.fixedDeltaTime * rotateSpeed, 0));
 
+		sensor.rotation = Quaternion.Euler(rightstick.y * -rotateSpeed, rightstick.x * rotateSpeed, 0);
 
 	}
 

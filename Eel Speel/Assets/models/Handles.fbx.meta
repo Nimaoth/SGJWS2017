@@ -4,10 +4,30 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: pPipe4
+    100004: pPipe5
+    100006: pPipe6
+    400000: //RootNode
+    400002: pPipe4
+    400004: pPipe5
+    400006: pPipe6
+    2300000: pPipe4
+    2300002: pPipe5
+    2300004: pPipe6
+    3300000: pPipe4
+    3300002: pPipe5
+    3300004: pPipe6
     4300000: pPipe4
     4300002: pPipe5
     4300004: pPipe6
-  externalObjects: {}
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 393938a647864c84eb4398c12f654e91, type: 2}
   materials:
     importMaterials: 1
     materialName: 3
