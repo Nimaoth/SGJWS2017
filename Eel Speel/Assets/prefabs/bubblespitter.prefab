@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4312893816748076}
   - component: {fileID: 33765284549515332}
   - component: {fileID: 23520587808589674}
-  - component: {fileID: 95655473394914432}
   m_Layer: 0
   m_Name: bubblespitter
   m_TagString: Untagged
@@ -83,20 +82,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1602029833732682}
   m_Mesh: {fileID: 4300000, guid: 4ad9c7b036b912c4896b54a20938e8c9, type: 3}
---- !u!95 &95655473394914432
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1602029833732682}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 4ad9c7b036b912c4896b54a20938e8c9, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1

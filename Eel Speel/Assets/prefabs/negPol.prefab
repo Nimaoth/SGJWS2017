@@ -19,10 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4969438324462938}
-  - component: {fileID: 95046225752506296}
   - component: {fileID: 114646009444554246}
   - component: {fileID: 136701998910707880}
   - component: {fileID: 23034045946822724}
+  - component: {fileID: 136915324498064696}
   m_Layer: 0
   m_Name: negPol
   m_TagString: Untagged
@@ -293,23 +293,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719661479929814}
   m_Mesh: {fileID: 4300000, guid: 74383d1608d0c2b4f8c0f1d6046d44d9, type: 3}
---- !u!95 &95046225752506296
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1202696135030374}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 74383d1608d0c2b4f8c0f1d6046d44d9, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114646009444554246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,9 +312,22 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1202696135030374}
   m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136915324498064696
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202696135030374}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.6
+  m_Radius: 1
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
