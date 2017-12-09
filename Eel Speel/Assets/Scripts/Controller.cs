@@ -91,4 +91,9 @@ public class Controller {
 	{
 		return Input.GetButton("R2_" + id);
 	}
+
+	public bool GetXDown()
+	{
+		return Input.GetButtonDown("X_" + id);
+	}
 }
