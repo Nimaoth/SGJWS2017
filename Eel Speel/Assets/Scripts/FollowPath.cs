@@ -13,6 +13,8 @@ public class FollowPath : MonoBehaviour {
     public BGCurve curve;
 	public BGCcMath math;
 
+	public AudioSource audio;
+
 	private float pathLength = 0;
 
 	[SerializeField]
@@ -54,5 +56,17 @@ public class FollowPath : MonoBehaviour {
 		var pos = math.CalcPositionByDistanceRatio(position / pathLength);
 		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
+	}
+
+	public void Suck(float amount)
+	{
+		if (amount > 0)
+		{
+			audio.Play();
+		}
+		else
+		{
+
+		}
 	}
 }
