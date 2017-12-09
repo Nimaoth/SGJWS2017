@@ -12,8 +12,9 @@ public class FollowPath : MonoBehaviour {
 
     public BGCurve curve;
 	public BGCcMath math;
-
-	public AudioSource audio;
+	
+	public AudioClip suck;
+	public AudioClip antiSuck;
 
 	private float pathLength = 0;
 
@@ -62,11 +63,11 @@ public class FollowPath : MonoBehaviour {
 	{
 		if (amount > 0)
 		{
-			audio.Play();
+			AudioSource.PlayClipAtPoint(suck, Vector3.zero);
 		}
 		else
 		{
-
+			AudioSource.PlayClipAtPoint(antiSuck, Vector3.zero);
 		}
 	}
 }
