@@ -273,7 +273,9 @@
     <Compile Include="Assets\Scripts\PlayerJoin.cs" />
     <Compile Include="Assets\Scripts\PlayerModel.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\SelectionManager.cs" />
     <Compile Include="Assets\Scripts\snake_mov.cs" />
+    <Compile Include="Assets\Scripts\SplitScreenMan.cs" />
     <Compile Include="Assets\Scripts\TitleAalMovement.cs" />
     <Compile Include="Assets\Scripts\TitlePols.cs" />
     <Compile Include="Assets\Scripts\TrackManager.cs" />

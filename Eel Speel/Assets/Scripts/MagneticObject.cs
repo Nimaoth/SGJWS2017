@@ -24,7 +24,6 @@ public class MagneticObject : MonoBehaviour
         {
             var Object = other.transform.parent.parent.parent.GetComponent<FollowPath>();
             Object.Acceleration = 0.0f;
-            Debug.Log("boost end");
         }
     }
     // Use this for initialization
