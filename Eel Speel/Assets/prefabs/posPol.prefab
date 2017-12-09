@@ -53,10 +53,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4605433553937684}
-  - component: {fileID: 95593550445712410}
   - component: {fileID: 114723505710628522}
   - component: {fileID: 23144988994100684}
   - component: {fileID: 136435817280824676}
+  - component: {fileID: 136243483655808060}
   m_Layer: 0
   m_Name: posPol
   m_TagString: Untagged
@@ -293,23 +293,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1685754160617920}
   m_Mesh: {fileID: 4300004, guid: 919a91fed82ebc74f9acfd74478c983e, type: 3}
---- !u!95 &95593550445712410
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1388313534634510}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 919a91fed82ebc74f9acfd74478c983e, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114723505710628522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,6 +305,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pol: 1
+--- !u!136 &136243483655808060
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1388313534634510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.75
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136435817280824676
 CapsuleCollider:
   m_ObjectHideFlags: 1
