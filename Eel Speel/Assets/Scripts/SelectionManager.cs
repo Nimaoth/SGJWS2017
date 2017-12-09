@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SelectionManager : MonoBehaviour {
 
-	public static int[] PlayerIds = new int[] { 1 };
+	public static int[] PlayerIds = new int[] { 1,2,3 };
 
 	public PlayerJoin[] players;
 	

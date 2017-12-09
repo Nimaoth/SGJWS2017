@@ -10,7 +10,9 @@ public class FollowPath : MonoBehaviour {
     public float multiplierMax = 2.0f;
     public float multiplierMin = 0.5f;
     public float multiplierDamp = 1.0f;
+    public float totalDistance = 0f;
 
+    public Text place;
     public Text timeText;
 
     public BGCurve curve;
@@ -49,6 +51,8 @@ public class FollowPath : MonoBehaviour {
     {
         Timer = Time.time;
         timeText.text = Timer.ToString("0.00");
+        int tempPlace = SplitScreenMan.players.IndexOf(this) + 1;
+        place.text = tempPlace + "/" + SplitScreenMan.players.Count;
     }
 
     // Update is called once per frame
@@ -66,10 +70,13 @@ public class FollowPath : MonoBehaviour {
 			position += pathLength;
 
 		position += speed * multiplier * Time.fixedDeltaTime;
+        totalDistance += speed * multiplier * Time.fixedDeltaTime;
 
 		var pos = math.CalcPositionByDistanceRatio(position / pathLength);
 		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
+
+        
 	}
 
 	public void Suck(float amount)
