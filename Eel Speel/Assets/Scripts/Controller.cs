@@ -9,6 +9,11 @@ public class Controller {
 		this.id = id;
 	}
 
+	public float GetBack2Axis()
+	{
+		return Input.GetAxis("R2Axis_" + id) - Input.GetAxis("L2Axis_" + id);
+	}
+
 	public float GetHorizontalLeftAxis()
 	{
 		return Input.GetAxis("HorizontalLeft_" + id);
@@ -85,5 +90,15 @@ public class Controller {
 	public bool GetR2()
 	{
 		return Input.GetButton("R2_" + id);
+	}
+
+	public bool GetXDown()
+	{
+		return Input.GetButtonDown("X_" + id);
+	}
+
+	public static bool GetPadDown()
+	{
+		return Input.GetButtonDown("Pad");
 	}
 }

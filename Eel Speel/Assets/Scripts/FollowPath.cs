@@ -3,9 +3,18 @@ using BansheeGz.BGSpline.Curve;
 using UnityEngine;
 
 public class FollowPath : MonoBehaviour {
+    public float Acceleration = 0.0f;
+    public float multiplier = 1;
+    public float multiplierOffset = 0.01f;
+    public float multiplierMax = 2.0f;
+    public float multiplierMin = 0.5f;
+    public float multiplierDamp = 1.0f;
 
-	public BGCurve curve;
+    public BGCurve curve;
 	public BGCcMath math;
+	
+	public AudioClip suck;
+	public AudioClip antiSuck;
 
 	private float pathLength = 0;
 
@@ -27,20 +36,38 @@ public class FollowPath : MonoBehaviour {
 				p2.PositionWorld);
 			pathLength += l;
 		}
-		Debug.Log("Path length: " + pathLength);
-		Debug.Log(math);
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
+        multiplier *= 1 + (Acceleration * 0.02f);
+
+        //damp
+        multiplier = Mathf.Lerp(multiplier, 1.0f, Time.fixedDeltaTime * multiplierDamp);
+        multiplier = Mathf.Clamp(multiplier, multiplierMin, multiplierMax);
 		if (position >= pathLength)
-			position = 0;
+			position -= pathLength;
 
-		position += speed * Time.fixedDeltaTime;
+		if (position < 0)
+			position += pathLength;
 
-		var pos = math.CalcByDistance(BGCurveBaseMath.Field.Position, position);
-		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistance(position));
+		position += speed * multiplier * Time.fixedDeltaTime;
+
+		var pos = math.CalcPositionByDistanceRatio(position / pathLength);
+		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
+	}
+
+	public void Suck(float amount)
+	{
+		if (amount > 0)
+		{
+			AudioSource.PlayClipAtPoint(suck, Vector3.zero);
+		}
+		else
+		{
+			AudioSource.PlayClipAtPoint(antiSuck, Vector3.zero);
+		}
 	}
 }
