@@ -219,9 +219,64 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCamera.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCcChangeCursorLinear.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCurveChange.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCurveClosestPoint.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCurveDynamic.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCurveMath.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCurveRuntime.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCurveRuntimeCustomFields.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCurveShowcase.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestCurveStatic.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestDirector.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestMainMenu.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Examples\Scripts\BGTestPerformance.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcCursor.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcCursorChangeLinear.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcCursorObjectRotate.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcCursorObjectScale.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcCursorObjectTranslate.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcMath.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcSplitterPolyline.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcSweep2D.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcTriangulate2D.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcVisualizationLineRenderer.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcWithCursor.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcWithCursorObject.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGCcWithMath.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGPolylineSplitter.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGPpu.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Cc\BGTriangulator2D.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCc.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurve.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveAdaptiveMath.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveBaseMath.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveCalculatorClosestPoint.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveChangedArgs.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveFormulaMath.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveFormulas.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveMathI.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurvePoint.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurvePointComponent.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurvePointField.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurvePointGO.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurvePointI.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveReferenceToPoint.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveSettings.cs" />
+    <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGReflectionAdapter.cs" />
+    <Compile Include="Assets\Scripts\AaalMovement.cs" />
+    <Compile Include="Assets\Scripts\BodyMovement.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\FollowPath.cs" />
+    <Compile Include="Assets\Scripts\OnTouch.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\snake_mov.cs" />
+    <Compile Include="Assets\Scripts\TrackManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\BansheeGz\BGCurve\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
