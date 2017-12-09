@@ -25,11 +25,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField]
 	private int id;
 
-    [SerializeField]
-    private float mindistance; //for SnakeLike player movement
-
-    public List<Transform> BodyParts = new List<Transform>();
-    private Rigidbody playerRigid;
+	private Rigidbody playerRigid;
 	private Controller controller;
 
 	private Vector3 previosPos = Vector3.zero;
