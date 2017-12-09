@@ -29,8 +29,6 @@ public class FollowPath : MonoBehaviour {
 				p2.PositionWorld);
 			pathLength += l;
 		}
-		Debug.Log("Path length: " + pathLength);
-		Debug.Log(math);
 	}
 	
 	// Update is called once per frame
