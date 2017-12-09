@@ -1,13 +1,7 @@
 ﻿
-<<<<<<< HEAD
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eel Speel", "Eel Speel.csproj", "{4B76CB7E-B54E-19AD-723E-1B34EA2173DF}"
-=======
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eel Speel", "Assembly-CSharp.csproj", "{426CC1BB-3D8E-D189-5F1F-462B66AA6518}"
->>>>>>> cfd68910d5d75ffe6fe7c5ad033970dac27eb366
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eel Speel", "Assembly-CSharp-Editor.csproj", "{56F52D63-77B8-DB91-B866-86BC415758E8}"
 EndProject
