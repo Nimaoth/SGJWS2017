@@ -66,4 +66,24 @@ public class Controller {
 	{
 		return Input.GetButtonDown("R2_" + id);
 	}
+
+	public bool GetL1()
+	{
+		return Input.GetButton("L1_" + id);
+	}
+
+	public bool GetL2()
+	{
+		return Input.GetButton("L2_" + id);
+	}
+
+	public bool GetR1()
+	{
+		return Input.GetButton("R1_" + id);
+	}
+
+	public bool GetR2()
+	{
+		return Input.GetButton("R2_" + id);
+	}
 }

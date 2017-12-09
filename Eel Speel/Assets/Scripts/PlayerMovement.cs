@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 		controller = new Controller(id);
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
 		float speed = playerSpeed;
 		//if (lookingAtBuff)
@@ -36,7 +36,13 @@ public class PlayerMovement : MonoBehaviour
 		//#endregion
 
 		var l = controller.GetLeftStick();
-		var force = new Vector3(l.x, l.y, 0) * movementForce;
-		playerRigid.AddForce(force);
+		var force = new Vector4(l.x, l.y, controller.GetR1() ? 1 : 0, 0) * movementForce;
+
+		var uiae = transform.localToWorldMatrix * force;
+		playerRigid.AddForce(uiae.x, uiae.y, uiae.z);
+
+		var rightStick = controller.GetRightStick();
+		transform.Rotate(new Vector3(rightStick.y * Time.deltaTime * 50, rightStick.x * Time.fixedDeltaTime * -50, 0));
 	}
+	
 }
