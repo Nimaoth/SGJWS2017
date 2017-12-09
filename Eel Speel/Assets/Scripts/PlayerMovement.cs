@@ -55,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
 		var targetRot = Quaternion.Euler(rightstick.y * -rotateSpeed, rightstick.x * rotateSpeed, 0);
 		sensor.localRotation = Quaternion.Lerp(sensor.localRotation, targetRot, Time.fixedDeltaTime * 5);
-        
+
+		Debug.Log(controller.GetBack2Axis());
 	}
 
 	private void LateUpdate()
