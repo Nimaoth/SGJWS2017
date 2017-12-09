@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class OnTouch : MonoBehaviour {
+public class TitlePols : MonoBehaviour {
 
     public GameObject font;
     public Color deactivated;
@@ -12,6 +13,8 @@ public class OnTouch : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        
         if(font != null)
         font.GetComponent<Renderer>().material.SetColor("_Color", deactivated);
     }
@@ -27,6 +30,7 @@ public class OnTouch : MonoBehaviour {
         font.GetComponent<Renderer>().material.SetColor("_Color", activated);
         entered = true;
         StartCoroutine("active");
+        StartCoroutine("changeScene");
     }
 
     private void OnTriggerExit(Collider other)
@@ -53,8 +57,22 @@ public class OnTouch : MonoBehaviour {
                 yield return new WaitForSeconds(Random.Range(0.01f, 0.1f));
                 font.GetComponent<Renderer>().material.color = activated;
                 yield return new WaitForSeconds(Random.Range(0.05f, 0.1f));
+                Debug.Log("Entered");
             }
 
         }
+    }
+
+    IEnumerator changeScene()
+    {
+        for(float i = 0; i < 5f; i += Time.deltaTime)
+        {
+            if (!entered)
+            {
+                yield break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
+        SceneManager.LoadScene("menu");
     }
 }

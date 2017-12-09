@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -265,13 +267,13 @@
     <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveReferenceToPoint.cs" />
     <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGCurveSettings.cs" />
     <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Curve\BGReflectionAdapter.cs" />
-    <Compile Include="Assets\Scripts\AaalMovement.cs" />
+    <Compile Include="Assets\Scripts\TitleAalMovement.cs" />
     <Compile Include="Assets\Scripts\BodyMovement.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\FollowPath.cs" />
     <Compile Include="Assets\Scripts\MagneticObject.cs" />
-    <Compile Include="Assets\Scripts\OnTouch.cs" />
+    <Compile Include="Assets\Scripts\TitlePols.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\snake_mov.cs" />
     <Compile Include="Assets\Scripts\TrackManager.cs" />
