@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AaalMovement : MonoBehaviour {
+public class TitleAalMovement : MonoBehaviour {
 
     public GameObject anchor;
     public float maxlength;
@@ -15,7 +15,7 @@ public class AaalMovement : MonoBehaviour {
 	
 	// Update is called once per 
 	void Update () {
-        Vector2 updated = new Vector2(transform.position.x + Input.GetAxis("Horizontal") - anchor.transform.position.x, transform.position.y + Input.GetAxis("Vertical") - anchor.transform.position.y);
+        Vector2 updated = new Vector2(transform.position.x + Input.GetAxis("HorizontalLeft_1") - anchor.transform.position.x, transform.position.y + Input.GetAxis("VerticalLeft_1") - anchor.transform.position.y);
         if(updated.magnitude > maxlength)
         {
             updated.Normalize();
