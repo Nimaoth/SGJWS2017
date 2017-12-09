@@ -17,7 +17,7 @@ public class SplitScreenMan : MonoBehaviour {
 				ps.Add(p);
 			}
 		}
-
+		
 		switch (ps.Count)
 		{
 			case 2:
