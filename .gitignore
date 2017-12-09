@@ -261,6 +261,8 @@ _Pvt_Extensions
 .paket/paket.exe
 paket-files/
 
+*.meta
+
 # FAKE - F# Make
 .fake/
 
