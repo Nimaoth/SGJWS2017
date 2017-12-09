@@ -1090,7 +1090,7 @@ MonoBehaviour:
   bodyRotSpeed: 50
   sensor: {fileID: 1580301936}
   movementForce: 150
-  rotateSpeed: 150
+  rotateSpeed: 40
   id: 1
 --- !u!4 &850869832
 Transform:
