@@ -35,12 +35,15 @@ public class FollowPath : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		if (position >= pathLength)
-			position = 0;
+			position -= pathLength;
+
+		if (position < 0)
+			position += pathLength;
 
 		position += speed * Time.fixedDeltaTime;
 
-		var pos = math.CalcByDistance(BGCurveBaseMath.Field.Position, position);
-		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistance(position));
+		var pos = math.CalcPositionByDistanceRatio(position / pathLength);
+		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
 	}
 }
