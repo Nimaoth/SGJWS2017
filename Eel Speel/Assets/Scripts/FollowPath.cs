@@ -24,8 +24,11 @@ public class FollowPath : MonoBehaviour {
 	[SerializeField]
 	private float speed = 1;
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private float Timer = 0.0f;
+
+    // Use this for initialization
+    void Start () {
 		for (int i = 0; i < curve.PointsCount - 1; i++)
 		{
 			var p1 = curve.Points[i];
@@ -37,9 +40,15 @@ public class FollowPath : MonoBehaviour {
 			pathLength += l;
 		}
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    //Timer
+    private void Update()
+    {
+        Timer = Time.time;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate ()
 	{
         multiplier *= 1 + (Acceleration * 0.02f);
 
