@@ -271,14 +271,8 @@
     <Compile Include="Assets\Scripts\FollowPath.cs" />
     <Compile Include="Assets\Scripts\OnTouch.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\snake_mov.cs" />
     <Compile Include="Assets\Scripts\TrackManager.cs" />
-    <Compile Include="Assets\Splines\Scripts\HelperClasses\Set.cs" />
-    <Compile Include="Assets\Splines\Scripts\HelperClasses\Utility.cs" />
-    <Compile Include="Assets\Splines\Scripts\SplineClasses\Spline.cs" />
-    <Compile Include="Assets\Splines\Scripts\SplineClasses\SplineColliderDraw.cs" />
-    <Compile Include="Assets\Splines\Scripts\SplineClasses\SplineController.cs" />
-    <Compile Include="Assets\Splines\Scripts\SplineClasses\SplineNode.cs" />
-    <Compile Include="Assets\Splines\Scripts\SplineClasses\SplineTester.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BansheeGz\BGCurve\readme.txt" />

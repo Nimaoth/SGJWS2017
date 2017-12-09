@@ -333,9 +333,6 @@
     <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Editor\Utils\BGTableView.cs" />
     <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Editor\Utils\BGTransition.cs" />
     <Compile Include="Assets\BansheeGz\BGCurve\Scripts\Editor\Utils\BGTreeView.cs" />
-    <Compile Include="Assets\Splines\Scripts\Editor\SplineControllerInspector.cs" />
-    <Compile Include="Assets\Splines\Scripts\Editor\SplineInspector.cs" />
-    <Compile Include="Assets\Splines\Scripts\Editor\SplineNodeInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BansheeGz\BGCurve\readme.txt" />
