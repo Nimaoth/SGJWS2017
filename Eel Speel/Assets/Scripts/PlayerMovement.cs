@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public bool blue = true;
-    
+    [SerializeField]
+    private float maxLength;
 
 	public Transform bodyTransform;
 	private List<Transform> bodyParts;
@@ -58,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void LateUpdate()
 	{
+        transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, maxLength);
 		for (int i = 0; i < bodyParts.Count; i++)
 		{
 			Transform t = bodyParts[i];
@@ -69,5 +71,6 @@ public class PlayerMovement : MonoBehaviour
 
 			t.position = p.position + dir;
 		}
+
 	}
 }

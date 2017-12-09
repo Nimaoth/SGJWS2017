@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 124102903512892670}
   - component: {fileID: 114754136222002378}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4793147817242490}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4787694619013674}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   curve: {fileID: 114050755801716234, guid: 5a4331881a3711b48908124aa26457e8, type: 2}
   math: {fileID: 114826541419650716, guid: 5a4331881a3711b48908124aa26457e8, type: 2}
   position: 0
-  speed: 20
+  speed: 30
 --- !u!124 &124102903512892670
 Behaviour:
   m_ObjectHideFlags: 1
