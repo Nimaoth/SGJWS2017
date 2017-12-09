@@ -91,4 +91,14 @@ public class Controller {
 	{
 		return Input.GetButton("R2_" + id);
 	}
+
+	public bool GetXDown()
+	{
+		return Input.GetButtonDown("X_" + id);
+	}
+
+	public static bool GetPadDown()
+	{
+		return Input.GetButtonDown("Pad");
+	}
 }

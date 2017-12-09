@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 	private float rotateSpeed;
 
 	[SerializeField]
-	private int id;
+	public int id;
 
 	private Rigidbody playerRigid;
 	private Controller controller;

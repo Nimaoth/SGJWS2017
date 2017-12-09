@@ -7,6 +7,8 @@ public class PlayerJoin : MonoBehaviour {
 	public int id;
 	public bool joined = false;
 
+	public GameObject text;
+
 	private Controller controller;
 
 	private void Start()
@@ -16,9 +18,10 @@ public class PlayerJoin : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-		//if (controller.GetXDown())
+		if (controller.GetXDown())
 		{
 			joined = !joined;
+			text.SetActive(joined);
 		}
 	}
 }
