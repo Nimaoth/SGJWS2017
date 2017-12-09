@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float blueYellowNone = 0;
+    [SerializeField]
+    private float maxLength;
 
-	[SerializeField]
-	private float playerSpeed;
+	public Transform bodyTransform;
+	private List<Transform> bodyParts;
+	public float minDistanc = 1;
+	public float bodyRotSpeed = 50;
+
+
+	public Transform sensor;
 
 	[SerializeField]
 	private float movementForce;
+
+	[SerializeField]
+	private float rotateSpeed;
 
 	[SerializeField]
 	private int id;
@@ -21,32 +32,77 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody playerRigid;
 	private Controller controller;
 
+	private Vector3 previosPos = Vector3.zero;
+
 	void Start()
 	{
 		playerRigid = GetComponent<Rigidbody>();
 		controller = new Controller(id);
+
+		bodyParts = new List<Transform>();
+		for (int i = 0; i < bodyTransform.childCount; i++)
+		{
+			bodyParts.Add(bodyTransform.GetChild(i));
+		}
 	}
 
 	void FixedUpdate()
 	{
-		float speed = playerSpeed;
-		//if (lookingAtBuff)
-		//{
-		//	yield return new waitForSeconds(0.1);
-		//	speed *= speedBuff;
-		//}
-		//#region player Movement
-		//Vector3 force = new Vector3();
-		//#endregion
+        blueYellowNone = controller.GetBack2Axis();
+		previosPos = transform.position;
 
 		var l = controller.GetLeftStick();
-		var force = new Vector4(l.x, l.y, controller.GetR1() ? 1 : 0, 0) * movementForce;
-
+		var force = new Vector4(l.x, l.y, 0, 0) * movementForce;
+		
 		var uiae = transform.localToWorldMatrix * force;
-		playerRigid.AddForce(uiae.x, uiae.y, uiae.z);
+			playerRigid.AddForce(uiae.x, uiae.y, uiae.z);
 
-		var rightStick = controller.GetRightStick();
-		transform.Rotate(new Vector3(rightStick.y * Time.deltaTime * 50, rightStick.x * Time.fixedDeltaTime * -50, 0));
+		var rightstick = controller.GetRightStick();
+
+		var targetRot = Quaternion.Euler(rightstick.y * -rotateSpeed, rightstick.x * rotateSpeed, 0);
+		sensor.localRotation = Quaternion.Lerp(sensor.localRotation, targetRot, Time.fixedDeltaTime * 5);
 	}
-	
+
+	private void LateUpdate()
+	{
+		transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
+        //transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, maxLength);
+
+		var prev = previosPos;
+		for (int i = 0; i < bodyParts.Count; i++)
+		{
+			Transform t = bodyParts[i];
+			Transform p = i == 0 ? transform : bodyParts[i - 1];
+
+			//var q = t.position - p.position;
+			//var d = (prev - t.position).normalized;
+			//var b = 2.0f * Vector3.Dot(d, q);
+			//var c = Vector3.Dot(q, q) - minDistanc * minDistanc;
+			//var disc = b * b - 4 * c;
+
+			//if (disc <= 0)
+			{
+				var dir = t.position - p.position;
+				dir.Normalize();
+				dir *= minDistanc;
+
+				prev = t.position;
+				t.position = p.position + dir;
+			}
+			//else
+			//{
+			//	prev = t.position;
+			//	var f = -0.5f * (b + Mathf.Sqrt(disc));
+			//	t.position += d * f;
+
+			//	var dir = t.position - p.position;
+			//	dir.Normalize();
+			//	dir *= minDistanc;
+
+			//	prev = t.position;
+			//	t.position = p.position + dir;
+			//}
+		}
+
+	}
 }

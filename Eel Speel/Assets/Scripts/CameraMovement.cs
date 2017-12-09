@@ -11,9 +11,6 @@ public class CameraMovement : MonoBehaviour {
 	private float moveSpeed;
 
 	[SerializeField]
-	private float smoothTime;
-
-	[SerializeField]
 	private float lookSpeed;
 
 
