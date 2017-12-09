@@ -9,6 +9,11 @@ public class Controller {
 		this.id = id;
 	}
 
+	public float GetBack2Axis()
+	{
+		return Input.GetAxis("R2Axis_" + id) - Input.GetAxis("L2Axis_" + id);
+	}
+
 	public float GetHorizontalLeftAxis()
 	{
 		return Input.GetAxis("HorizontalLeft_" + id);

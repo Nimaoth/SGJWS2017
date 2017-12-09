@@ -3,8 +3,12 @@ using BansheeGz.BGSpline.Curve;
 using UnityEngine;
 
 public class FollowPath : MonoBehaviour {
-    public bool isAccelerating;
-    private float multiplier = 1;
+    public float Acceleration = 0.0f;
+    public float multiplier = 1;
+    public float multiplierOffset = 0.01f;
+    public float multiplierMax = 2.0f;
+    public float multiplierMin = 0.5f;
+    public float multiplierDamp = 1.0f;
 
     public BGCurve curve;
 	public BGCcMath math;
@@ -29,23 +33,16 @@ public class FollowPath : MonoBehaviour {
 				p2.PositionWorld);
 			pathLength += l;
 		}
-		Debug.Log("Path length: " + pathLength);
-		Debug.Log(math);
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-        if (isAccelerating)
-        {
-            multiplier *= 1.05f;
-        }
-        else if (multiplier > 1)
-        {
-            multiplier *= 0.95f;
-        }
+        multiplier *= 1 + (Acceleration * 0.02f);
 
-
+        //damp
+        multiplier = Mathf.Lerp(multiplier, 1.0f, Time.fixedDeltaTime * multiplierDamp);
+        multiplier = Mathf.Clamp(multiplier, multiplierMin, multiplierMax);
 		if (position >= pathLength)
 			position -= pathLength;
 
