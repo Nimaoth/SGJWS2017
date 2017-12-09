@@ -8,8 +8,18 @@ public class snake_mov : MonoBehaviour {
     public float scrollSpeedY;
     public Renderer rend;
 
-	// Use this for initialization
-	void Start () {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "PlayerBody")
+        {
+            var Object = other.transform.parent.parent.parent.GetComponent<FollowPath>();
+            Object.Acceleration = 0.0f;
+            Debug.Log("snake hit");
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
         rend = GetComponent<Renderer>();
 	}
 	
