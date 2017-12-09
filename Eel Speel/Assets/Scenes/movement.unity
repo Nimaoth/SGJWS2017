@@ -236,11 +236,20 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 82081751614991456, guid: 20d306ec0a17db942bfc17f1b29d7207,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ccdcde967b8cb1b4796e73666bc669dc, type: 3}
+    - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
+        type: 2}
+      propertyPath: suck
+      value: 
+      objectReference: {fileID: 8300000, guid: 513ce399982e8724fbaf6209c387976e, type: 3}
+    - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
+        type: 2}
+      propertyPath: antiSuck
+      value: 
+      objectReference: {fileID: 8300000, guid: 91600e8712e998a44be86383279babb2, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20d306ec0a17db942bfc17f1b29d7207, type: 2}
   m_IsPrefabParent: 0
@@ -1103,11 +1112,20 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 82081751614991456, guid: 20d306ec0a17db942bfc17f1b29d7207,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 562df0e92fb5c984cb5b56b77d3cc2b6, type: 3}
+    - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
+        type: 2}
+      propertyPath: suck
+      value: 
+      objectReference: {fileID: 8300000, guid: 40452794d9238da42a0d5816e68b78dd, type: 3}
+    - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
+        type: 2}
+      propertyPath: antiSuck
+      value: 
+      objectReference: {fileID: 8300000, guid: 276ce42155d689444a84e7c12008ba67, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20d306ec0a17db942bfc17f1b29d7207, type: 2}
   m_IsPrefabParent: 0
@@ -5993,11 +6011,20 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 82081751614991456, guid: 20d306ec0a17db942bfc17f1b29d7207,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7d18a1fa7e124844c99d56bb60e2ed18, type: 3}
+    - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
+        type: 2}
+      propertyPath: suck
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d18a1fa7e124844c99d56bb60e2ed18, type: 3}
+    - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
+        type: 2}
+      propertyPath: antiSuck
+      value: 
+      objectReference: {fileID: 8300000, guid: 40452794d9238da42a0d5816e68b78dd, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20d306ec0a17db942bfc17f1b29d7207, type: 2}
   m_IsPrefabParent: 0
