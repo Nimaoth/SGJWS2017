@@ -36,13 +36,19 @@ public class PlayerMovement : MonoBehaviour
 		//#endregion
 
 		var l = controller.GetLeftStick();
-		var force = new Vector4(l.x, l.y, controller.GetR1() ? 1 : 0, 0) * movementForce;
+		var f = 0;
+		if (controller.GetL1())
+			f--;
+		if (controller.GetR1())
+			f++;
+		var force = new Vector4(l.x, l.y, f * 1.0f, 0) * movementForce;
 
 		var uiae = transform.localToWorldMatrix * force;
 		playerRigid.AddForce(uiae.x, uiae.y, uiae.z);
 
 		var rightStick = controller.GetRightStick();
-		transform.Rotate(new Vector3(rightStick.y * Time.deltaTime * 50, rightStick.x * Time.fixedDeltaTime * -50, 0));
+		transform.Rotate(new Vector3(rightStick.y * Time.deltaTime * -50, rightStick.x * Time.fixedDeltaTime * 50, 0));
+		
 	}
 	
 }
