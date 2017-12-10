@@ -4,14 +4,16 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SelectionManager : MonoBehaviour {
+public class SelectionManager : MonoBehaviour
+{
 
-	public static int[] PlayerIds = new int[] { 1,2,3 };
+	public static int[] PlayerIds = new int[] { 1 };
 
 	public PlayerJoin[] players;
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 		if (Controller.GetPadDown())
 		{
 			PlayerIds = players.Where(p => p.joined).Select(p => p.id).ToArray();
