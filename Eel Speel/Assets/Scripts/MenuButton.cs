@@ -22,7 +22,7 @@ public class MenuButton : MonoBehaviour {
 
     void LoadStartScene()
     {
-        SceneManager.LoadScene("player_selection");
+        SceneManager.LoadScene("player_seletion");
     }
 
     void LoadTutorial()

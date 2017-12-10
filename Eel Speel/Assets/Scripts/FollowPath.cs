@@ -81,6 +81,20 @@ public class FollowPath : MonoBehaviour {
 
         if (totalDistance / pathLength > 8.0f)
         {
+            string name;
+            switch (transform.GetComponentInChildren<PlayerMovement>().id)
+            {
+                case 1: name = "Aal Capone";
+                    break;
+                case 2: name = "Maalefitz";
+                    break;
+                case 3: name = "Sir Eelington";
+                    break;
+                case 4: name = "Senor Moreno";
+                    break;
+                default:
+                    break;
+            };
             SceneManager.LoadScene("EndScreen");
         }
 	}
