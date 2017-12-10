@@ -15,11 +15,10 @@ public class Projectile : MonoBehaviour {
 		var dist = float.MaxValue;
 		if (Physics.Raycast(ray, out info, float.MaxValue, mask))
 		{
-			dist = info.distance + 20;
+			dist = info.distance + 25;
 			
 			if (info.transform.tag == "PlayerAnchor")
 			{
-				Debug.Log("hit");
 				info.transform.GetComponent<FollowPath>().multiplier *= 0.5f;
 			}
 		}
