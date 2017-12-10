@@ -105,7 +105,7 @@ public class FollowPath : MonoBehaviour {
 		{
 			AudioSource.PlayClipAtPoint(suck, Vector3.zero);
 		}
-		else
+		else if (amount < 0)
 		{
 			AudioSource.PlayClipAtPoint(antiSuck, Vector3.zero);
 		}
