@@ -34,13 +34,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1804498770365328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.27941006, z: 0, w: 0.9601719}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 32.45, z: 0}
 --- !u!114 &114398863326249430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,10 +53,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   line: {fileID: 120356960203988930}
-  speed: 750
-  range: 5
-  lifetime: 0.5
-  max: 15
+  speed: 1000
+  range: 3
+  lifetime: 0.3
+  max: 25
 --- !u!120 &120356960203988930
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -107,7 +107,7 @@ LineRenderer:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
+      m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 0.691, a: 1}
