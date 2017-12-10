@@ -54,3 +54,7 @@ MonoBehaviour:
   lightningPrefab: {fileID: 1804498770365328, guid: aaed995cfec13db489fb09d6a2c13653,
     type: 2}
   count: 5
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  clip: {fileID: 8300000, guid: 5ae36afca47cd3643b2d6c011405b292, type: 3}

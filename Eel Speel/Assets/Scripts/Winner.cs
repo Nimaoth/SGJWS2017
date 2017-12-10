@@ -9,7 +9,7 @@ public class Winner : MonoBehaviour {
     public int playerCount;
 
     [SerializeField]
-    private float delayTime = 4.0f;
+    private float delayTime = 2.0f;
 
     public static void AddToList(FollowPath player)
     {
@@ -54,6 +54,6 @@ public class Winner : MonoBehaviour {
 
     private void DelayedAction()
     {
-		//SceneManager.LoadScene("EndScreen");
+		SceneManager.LoadScene("EndScreen");
 	}
 }

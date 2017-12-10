@@ -65,7 +65,7 @@ public class TitlePols : MonoBehaviour {
 
     IEnumerator changeScene()
     {
-        for(float i = 0; i < 5f; i += Time.deltaTime)
+        for(float i = 0; i < 3f; i += Time.deltaTime)
         {
             if (!entered)
             {

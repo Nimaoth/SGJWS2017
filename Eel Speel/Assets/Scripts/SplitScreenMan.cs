@@ -9,6 +9,7 @@ public class SplitScreenMan : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		players.Clear();
 		for (int i = 0; i < transform.childCount; i++)
 		{
 			var p = transform.GetChild(i).gameObject;

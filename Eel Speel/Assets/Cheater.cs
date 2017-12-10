@@ -26,5 +26,7 @@ public class Cheater : MonoBehaviour {
 
 		else if (Input.GetKeyDown(KeyCode.F5))
 			SceneManager.LoadScene("tutorial");
+		else if (Input.GetKeyDown(KeyCode.F6))
+			SceneManager.LoadScene("Title screen");
 	}
 }

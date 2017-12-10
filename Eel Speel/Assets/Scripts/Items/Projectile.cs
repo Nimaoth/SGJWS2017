@@ -8,8 +8,12 @@ public class Projectile : MonoBehaviour {
 	public int count;
 	public LayerMask mask;
 
+	public AudioClip clip;
+
 	// Use this for initialization
 	void Start () {
+		AudioSource.PlayClipAtPoint(clip, Vector3.zero);
+
 		var ray = new Ray(transform.position, transform.forward);
 		RaycastHit info;
 		var dist = float.MaxValue;

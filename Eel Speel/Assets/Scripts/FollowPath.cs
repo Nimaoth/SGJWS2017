@@ -63,7 +63,7 @@ public class FollowPath : MonoBehaviour {
     {
         Timer = Time.time;
 		int lap = (int)(totalDistance / pathLength);
-		timeText.text = string.Format("Lap: {0}/8", lap);
+		timeText.text = string.Format("Lap: {0}/6", lap);
         int tempPlace = SplitScreenMan.players.IndexOf(this) + 1;
         place.text = string.Format("Position: {0}/{1}", tempPlace, SplitScreenMan.players.Count);
     }
@@ -89,7 +89,7 @@ public class FollowPath : MonoBehaviour {
 		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
 		
-        if (totalDistance / pathLength > 8.0f)
+        if (totalDistance / pathLength > 6.0f)
         {
             if (alreadyAdded == false) 
             Winner.AddToList(this);

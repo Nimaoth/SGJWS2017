@@ -17,7 +17,7 @@ public class EndScreen : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //string name = Winner.names[0];
-        //message.text = "Herzlichen Glückwunsch, " + name + "!\nDu hast deine Konkurrenz besiegt.\nWie wäre es mit einem Rematch?";
+        message.text = "Herzlichen Glückwunsch,\ndu hast deine Konkurrenz besiegt.\nWie wäre es mit einem Rematch?";
         newGame.onClick.AddListener(LoadGame);
         endGame.onClick.AddListener(LoadMenu);
         for (int i = 0; i < Winner.players.Count; i++)
