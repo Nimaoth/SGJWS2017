@@ -178,7 +178,7 @@ Prefab:
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
       propertyPath: speed
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4853387338134200, guid: 20d306ec0a17db942bfc17f1b29d7207, type: 2}
       propertyPath: m_LocalPosition.z
@@ -212,7 +212,7 @@ Prefab:
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
       propertyPath: multiplierOffset
-      value: 0.03
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
@@ -611,7 +611,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 89926385}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -317.67, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1038,7 +1038,7 @@ Prefab:
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
       propertyPath: speed
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4853387338134200, guid: 20d306ec0a17db942bfc17f1b29d7207, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1072,7 +1072,7 @@ Prefab:
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
       propertyPath: multiplierOffset
-      value: 0.03
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
@@ -1331,6 +1331,16 @@ Prefab:
     - target: {fileID: 4668179128523060, guid: 20d306ec0a17db942bfc17f1b29d7207, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
+        type: 2}
+      propertyPath: multiplierOffset
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
+        type: 2}
+      propertyPath: speed
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20d306ec0a17db942bfc17f1b29d7207, type: 2}
@@ -6852,7 +6862,7 @@ Prefab:
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
       propertyPath: speed
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4853387338134200, guid: 20d306ec0a17db942bfc17f1b29d7207, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6886,7 +6896,7 @@ Prefab:
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
       propertyPath: multiplierOffset
-      value: 0.03
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 114864064378554072, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
