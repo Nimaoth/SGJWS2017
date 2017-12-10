@@ -35,7 +35,13 @@ public class FollowPath : MonoBehaviour {
     [SerializeField]
     private float Timer = 0.0f;
 
+    //[SerializeField]
+    //private float delayTime = 4.0f;
+
     public static string name;
+    public int playerCount;
+
+    public bool alreadyAdded = false;
 
     // Use this for initialization
     void Start () {
@@ -49,7 +55,8 @@ public class FollowPath : MonoBehaviour {
 				p2.PositionWorld);
 			pathLength += l;
 		}
-	}
+        playerCount = SplitScreenMan.players.Count;
+    }
 
     //Timer
     private void Update()
@@ -82,24 +89,33 @@ public class FollowPath : MonoBehaviour {
 		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
 
-        if (totalDistance / pathLength > 8.0f)
+        if (totalDistance / pathLength > 1.0f)
         {
-            switch (transform.GetComponentInChildren<PlayerMovement>().id)
-            {
-                case 1: name = "Aal Capone";
-                    break;
-                case 2: name = "Maalefitz";
-                    break;
-                case 3: name = "Sir Eelington";
-                    break;
-                case 4: name = "Senor Moreno";
-                    break;
-                default:
-                    break;
-            };
-            SceneManager.LoadScene("EndScreen");
+            if (alreadyAdded == false) 
+            Winner.AddToList(this);
+
+            alreadyAdded = true;
+            //switch (transform.getcomponentinchildren<playermovement>().id)
+            //{
+            //    case 1: name = "aal capone";
+            //        break;
+            //    case 2: name = "maalefitz";
+            //        break;
+            //    case 3: name = "sir eelington";
+            //        break;
+            //    case 4: name = "senor moreno";
+            //        break;
+            //    default:
+            //        break;
+            //};
+            //Invoke("DelayedAction", delayTime);
         }
 	}
+
+    //private void DelayedAction()
+    //{
+    //    SceneManager.LoadScene("EndScreen");
+    //}
 
 	public void Suck(float amount)
 	{

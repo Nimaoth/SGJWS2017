@@ -11,6 +11,7 @@ public class SelectionManager : MonoBehaviour
 
 	public PlayerJoin[] players;
 
+
 	// Update is called once per frame
 	void Update()
 	{
@@ -19,7 +20,7 @@ public class SelectionManager : MonoBehaviour
 			PlayerIds = players.Where(p => p.joined).Select(p => p.id).ToArray();
 			if (PlayerIds.Length >= 1)
 			{
-				SceneManager.LoadScene("movement");
+                SceneManager.LoadScene("movement");
 			}
 		}
 	}
