@@ -54,6 +54,6 @@ public class Winner : MonoBehaviour {
 
     private void DelayedAction()
     {
-        SceneManager.LoadScene("EndScreen");
-    }
+		//SceneManager.LoadScene("EndScreen");
+	}
 }

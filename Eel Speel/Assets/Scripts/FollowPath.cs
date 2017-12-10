@@ -88,8 +88,8 @@ public class FollowPath : MonoBehaviour {
 		var pos = math.CalcPositionByDistanceRatio(position / pathLength);
 		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
-
-        if (totalDistance / pathLength > 1.0f)
+		
+        if (totalDistance / pathLength > 8.0f)
         {
             if (alreadyAdded == false) 
             Winner.AddToList(this);
