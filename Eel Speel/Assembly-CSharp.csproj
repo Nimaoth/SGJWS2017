@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\BubbleStream.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
+     <Compile Include="Assets\Scripts\EndScreen.cs" />
      <Compile Include="Assets\Scripts\FollowPath.cs" />
      <Compile Include="Assets\Scripts\MagneticObject.cs" />
      <Compile Include="Assets\Scripts\MenuButton.cs" />

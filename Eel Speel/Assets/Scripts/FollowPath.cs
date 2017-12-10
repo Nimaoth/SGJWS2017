@@ -2,6 +2,7 @@
 using BansheeGz.BGSpline.Curve;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FollowPath : MonoBehaviour {
     public float Acceleration = 0.0f;
@@ -76,8 +77,11 @@ public class FollowPath : MonoBehaviour {
 		transform.rotation = Quaternion.LookRotation(math.CalcTangentByDistanceRatio(position / pathLength));
 		transform.position = pos;
 
-        
-	}
+        if ((totalDistance / pathLength) > 8.0f)
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
+    }
 
 	public void Suck(float amount)
 	{

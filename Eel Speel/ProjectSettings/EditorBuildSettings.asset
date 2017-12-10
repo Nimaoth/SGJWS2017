@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/movement.unity
     guid: d0e52083100614249b2eb9875b304afa
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: cfe462fc59dc6784c82ee97c7d848a78
