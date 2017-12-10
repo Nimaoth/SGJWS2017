@@ -17,8 +17,11 @@ public class Item : MonoBehaviour {
 
 	private IEnumerator Denable()
 	{
-		gameObject.SetActive(false);
+		var collider = GetComponentInChildren<Collider>();
+		var renderer = GetComponentInChildren<Renderer>();
+
+		collider.enabled = renderer.enabled = false;
 		yield return new WaitForSeconds(5);
-		gameObject.SetActive(true);
+		collider.enabled = renderer.enabled = true;
 	}
 }
