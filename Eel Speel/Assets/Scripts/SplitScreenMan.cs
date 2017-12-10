@@ -16,7 +16,7 @@ public class SplitScreenMan : MonoBehaviour {
 			{
 				p.SetActive(true);
 				players.Add(p.GetComponentInChildren<FollowPath>());
-				players[i].totalDistance = 4 - i;
+				players[i].totalDistance = 0.1f * (4 - i);
 			}
 		}
 		
