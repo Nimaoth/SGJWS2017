@@ -35,6 +35,6 @@ public class TitleAalMovement : MonoBehaviour {
         //Debug.Log(alpha);
         //transform.RotateAround(new Vector3(191, 183), Vector3.forward, 90 - alpha);
         transform.LookAt(rotationObject.transform);
-        transform.Rotate(Vector3.right, 90);
+        transform.Rotate(Vector3.down, 90);
     }
 }
