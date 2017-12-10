@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Eel Speel/Assets/PlusnMinnLightning.meta
 guid: 2ff917ddfeef760438e5103081aa07a0
 folderAsset: yes
 timeCreated: 1512889172
+=======
+guid: 039353fb2b4f69d488c37b99701d8328
+folderAsset: yes
+timeCreated: 1512889287
+>>>>>>> 376aff9b9941ea715c355b6925a956a02b6bdf74:Eel Speel/Assets/PlusnMinnLightning.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}
