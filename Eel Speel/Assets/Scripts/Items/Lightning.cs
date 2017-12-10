@@ -10,6 +10,7 @@ public class Lightning : MonoBehaviour {
 	public float range;
 	public float lifetime;
 	public int max;
+	public float maxDist;
 
 	void Start() {
 		StartCoroutine(uiae());
@@ -28,7 +29,9 @@ public class Lightning : MonoBehaviour {
 			arr[arr.Length - 1] = new Vector3(Random.Range(-range, range),
 				Random.Range(-range, range),
 				arr[arr.Length - 2].z + speed * Time.deltaTime);
-
+			if (arr[arr.Length - 1].z > maxDist)
+				break;
+			
 			line.positionCount = arr.Length;
 			line.SetPositions(arr);
 

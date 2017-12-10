@@ -6,17 +6,30 @@ public class Projectile : MonoBehaviour {
 
 	public GameObject lightningPrefab;
 	public int count;
+	public LayerMask mask;
 
 	// Use this for initialization
 	void Start () {
+		var ray = new Ray(transform.position, transform.forward);
+		RaycastHit info;
+		var dist = float.MaxValue;
+		if (Physics.Raycast(ray, out info, float.MaxValue, mask))
+		{
+			dist = info.distance + 20;
+			
+			if (info.transform.tag == "PlayerAnchor")
+			{
+				Debug.Log("hit");
+				info.transform.GetComponent<FollowPath>().multiplier *= 0.5f;
+			}
+		}
+
 		for (int i = 0; i < count; i++)
 		{
-			Instantiate(lightningPrefab, Vector3.zero, Quaternion.identity, transform);
+			var go = Instantiate(lightningPrefab, transform.position, transform.rotation);
+			go.GetComponent<Lightning>().maxDist = dist;
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+		Destroy(gameObject);
 	}
 }

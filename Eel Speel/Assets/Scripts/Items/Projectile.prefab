@@ -53,3 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightningPrefab: {fileID: 1804498770365328, guid: aaed995cfec13db489fb09d6a2c13653,
     type: 2}
+  count: 5
