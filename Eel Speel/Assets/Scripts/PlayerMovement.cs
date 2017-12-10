@@ -30,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
 
 	private Vector3 previosPos = Vector3.zero;
 
+    public Material sensorField;
+
+    static Color north = Color.green, south = Color.red;
+
 	void Start()
 	{
 		playerRigid = GetComponent<Rigidbody>();
@@ -40,12 +44,25 @@ public class PlayerMovement : MonoBehaviour
 		{
 			bodyParts.Add(bodyTransform.GetChild(i));
 		}
-	}
+
+        
+        
+        sensorField.SetColor("_Color", new Color(1, 1, 1, 0));
+    }
 
 	void FixedUpdate()
 	{
         blueYellowNone = controller.GetBack2Axis();
-		previosPos = transform.position;
+        sensorField.SetVector("_Position", new Vector4(transform.position.x, transform.position.y, transform.position.z));
+
+        if (blueYellowNone < 0)
+            sensorField.SetColor("_Color", north);
+        else if (blueYellowNone > 0)
+            sensorField.SetColor("_Color", south);
+        else
+            sensorField.SetColor("_Color", new Color(0, 0, 0, 0));
+
+        previosPos = transform.position;
 
 		var l = controller.GetLeftStick();
 		var force = new Vector4(l.x, l.y, 0, 0) * movementForce;
