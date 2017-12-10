@@ -103,6 +103,8 @@
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\EndScreen.cs" />
      <Compile Include="Assets\Scripts\FollowPath.cs" />
+     <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\Items\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\MagneticObject.cs" />
      <Compile Include="Assets\Scripts\MenuButton.cs" />
      <Compile Include="Assets\Scripts\PauseScreen.cs" />
@@ -115,7 +117,11 @@
      <Compile Include="Assets\Scripts\TitleAalMovement.cs" />
      <Compile Include="Assets\Scripts\TitlePols.cs" />
      <Compile Include="Assets\Scripts\TrackManager.cs" />
+     <Compile Include="Assets\Scripts\TutorialScreen.cs" />
+     <Compile Include="Assets\Scripts\Winner.cs" />
+     <None Include="Assets\Shaders\Stone Shader.shader" />
      <None Include="Assets\BansheeGz\BGCurve\readme.txt" />
+     <None Include="Assets\Shaders\Magnetic Cone.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

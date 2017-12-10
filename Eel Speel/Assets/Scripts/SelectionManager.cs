@@ -7,9 +7,10 @@ using UnityEngine.SceneManagement;
 public class SelectionManager : MonoBehaviour
 {
 
-	public static int[] PlayerIds = new int[] { 1, 2, 3, 4 };
+	public static int[] PlayerIds = new int[] { 1 };
 
 	public PlayerJoin[] players;
+
 
 	// Update is called once per frame
 	void Update()
@@ -19,7 +20,7 @@ public class SelectionManager : MonoBehaviour
 			PlayerIds = players.Where(p => p.joined).Select(p => p.id).ToArray();
 			if (PlayerIds.Length >= 1)
 			{
-				SceneManager.LoadScene("movement");
+                SceneManager.LoadScene("movement");
 			}
 		}
 	}

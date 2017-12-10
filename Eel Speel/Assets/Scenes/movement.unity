@@ -1280,6 +1280,7 @@ GameObject:
   - component: {fileID: 432617535}
   - component: {fileID: 432617536}
   - component: {fileID: 432617537}
+  - component: {fileID: 432617538}
   m_Layer: 0
   m_Name: Players
   m_TagString: Untagged
@@ -1328,6 +1329,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackscreen: {fileID: 1014746266}
   pause: {fileID: 1120952764}
+--- !u!114 &432617538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432617534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba309f2faf51254b81ffb724a4e7f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCount: 0
+  delayTime: 4
 --- !u!4 &465726396 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4232002610691662, guid: c37eb3290b011a04caeb1fcf0fb75584,
@@ -2289,7 +2303,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 966440147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 325.5, y: 183, z: 0}
+=======
+  m_LocalPosition: {x: 363, y: 204, z: 0}
+>>>>>>> 1d1a3f4102e9cfe40fab70082a31bb5d483e6c5e
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1014746267}
@@ -7847,7 +7865,7 @@ Prefab:
     - target: {fileID: 224926176969099898, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 400
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224926176969099898, guid: 20d306ec0a17db942bfc17f1b29d7207,
         type: 2}

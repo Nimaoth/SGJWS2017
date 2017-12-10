@@ -6,7 +6,6 @@ public class Item : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log(other.tag);
 		if (other.tag == "PlayerHead")
 		{
 			var shoot = other.transform.GetComponent<PlayerShoot>();

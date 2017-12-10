@@ -855,7 +855,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416249594827862}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 13.64}
   m_LocalScale: {x: 2, y: 9.744249, z: 2}
   m_Children: []
   m_Father: {fileID: 4787694619013674}
@@ -1269,7 +1269,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1322,7 +1322,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1372,9 +1372,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Acceleration: 0
   multiplier: 1
-  multiplierOffset: 0.12
-  multiplierMax: 2.55
-  multiplierMin: 0.5
+  multiplierOffset: 0.13
+  multiplierMax: 2.8
+  multiplierMin: 0.3
   multiplierDamp: 0.5
   totalDistance: 0
   place: {fileID: 114339371364289886}
@@ -1387,6 +1387,8 @@ MonoBehaviour:
   position: 0
   speed: 25
   Timer: 0
+  playerCount: 0
+  alreadyAdded: 0
 --- !u!124 &124102903512892670
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1428,8 +1430,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.8
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137345213139430182
@@ -1571,15 +1573,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619394014955042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 400, y: 34.99998, z: 0}
+  m_LocalPosition: {x: -50, y: 34.99998, z: 0}
   m_LocalScale: {x: 0.9996979, y: 0.9996979, z: 0.9996979}
   m_Children: []
   m_Father: {fileID: 224956988225990150}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450, y: -15.000018}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -100, y: -15.000018}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224956988225990150
