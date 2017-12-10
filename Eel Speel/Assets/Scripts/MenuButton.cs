@@ -11,13 +11,13 @@ public class MenuButton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        startButton.onClick.AddListener(LoadStartScene);
+        tutorialButton.onClick.AddListener(LoadTutorial);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        startButton.onClick.AddListener(LoadStartScene);
-        tutorialButton.onClick.AddListener(LoadTutorial);
+        
 	}
 
     void LoadStartScene()

@@ -35,6 +35,8 @@ public class FollowPath : MonoBehaviour {
     [SerializeField]
     private float Timer = 0.0f;
 
+    public static string name;
+
     // Use this for initialization
     void Start () {
 		for (int i = 0; i < curve.PointsCount - 1; i++)
@@ -81,7 +83,6 @@ public class FollowPath : MonoBehaviour {
 
         if (totalDistance / pathLength > 8.0f)
         {
-            string name;
             switch (transform.GetComponentInChildren<PlayerMovement>().id)
             {
                 case 1: name = "Aal Capone";
