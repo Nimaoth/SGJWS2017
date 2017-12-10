@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
 				prev = t.position;
 				t.position = p.position + dir;
-				var rot = Quaternion.Euler(-90, 0, -90) * Quaternion.LookRotation(dir);
+				var rot = Quaternion.LookRotation(-dir);
 				t.rotation = rot;
 			}
 		}
