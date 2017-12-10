@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShoot : MonoBehaviour {
 
@@ -10,7 +11,14 @@ public class PlayerShoot : MonoBehaviour {
 	private int charge = 0;
 
 	private Controller controller;
-	
+
+	public GameObject projectile;
+	public Transform projectileOrientation;
+
+	public LayerMask mask;
+
+	public Text text;
+
 	void Start () {
 		int id = GetComponent<PlayerMovement>().id;
 		controller = new Controller(id);
@@ -20,17 +28,21 @@ public class PlayerShoot : MonoBehaviour {
 		if (controller.GetR1Down() && charge > 0)
 		{
 			charge--;
-			// TODO: shoot
+			
+			var v = Instantiate(projectile, transform.position, projectileOrientation.rotation);
+			v.GetComponent<Projectile>().mask = mask;
 		}
+
+		text.text = "Charges: " + charge;
 	}
 
 	public void Charge()
 	{
 		charge++;
-		if (charge > maxCharge)
-		{
-			Overcharge();
-		}
+		//if (charge > maxCharge)
+		//{
+		//	Overcharge();
+		//}
 	}
 
 	private void Overcharge()
