@@ -1,2 +1,2 @@
-# SGJWS2017
-The Eel Speel
+# The Eel Speel
+Semester GameJam winter semester 2017
